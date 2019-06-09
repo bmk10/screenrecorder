@@ -73,7 +73,7 @@ public class DonateActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.donate_paypal:
-                String url = "http://paypal.me/vijaichander/5";
+                String url = "https://www.paypal.me/helpcode/1";
                 Intent donateURL = new Intent(Intent.ACTION_VIEW);
                 donateURL.setData(Uri.parse(url));
                 startActivity(donateURL);
@@ -81,7 +81,7 @@ public class DonateActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.donate_alt:
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"contact@orpheusdroid.com"});
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"gchipunov@gmail.com"});
                 intent.putExtra(Intent.EXTRA_SUBJECT, "ScreenCam alternate donation method");
                 startActivity(intent);
                 break;
